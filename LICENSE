@@ -1,2 +1,67 @@
+MultiAgeClock Noncommercial Research License 1.0
+
 Copyright (c) 2026 MultiAgeClock authors.
-All rights reserved. Distribution terms will be finalized before publication.
+
+1. Covered materials
+
+These terms apply to the MultiAgeClock source code, documentation, synthetic
+examples, model metadata, preprocessing and calibration parameters, and model
+weights distributed in this repository and its releases (the "Materials").
+Third-party dependencies retain their own licenses.
+
+2. Noncommercial research permission
+
+Subject to these terms, the copyright holders grant you a non-exclusive,
+worldwide, royalty-free permission to use, reproduce, study, modify, and
+redistribute the Materials solely for noncommercial scientific research,
+including method evaluation and reproducibility studies.
+
+Noncommercial scientific research means scientific investigation whose use of
+the Materials is not primarily directed toward commercial advantage or payment
+for providing the Materials or a product or service based on them. Publishing
+the findings of otherwise permitted research in a scholarly journal does not,
+by itself, make that research commercial. These terms do not transfer ownership
+of your input data or scientific findings to the copyright holders.
+
+3. Commercial use requires separate permission
+
+Any commercial use requires a separate written license from the copyright
+holders before that use begins. Commercial use includes selling or licensing
+the Materials, incorporating them into a commercial product or service,
+providing paid scoring or consulting services using them, and using them for
+research or development primarily directed toward commercial advantage,
+whether performed by a business or on its behalf. Merely describing an
+activity as research does not exempt commercial use.
+
+To request commercial permission, contact the repository maintainers at:
+https://github.com/Misaka-15134/MultiAgeClock
+
+4. Redistribution and modifications
+
+Every redistribution of the Materials, including modified versions and model
+weights, must retain the copyright notice and include this license. Clearly
+identify modifications and do not imply endorsement by the original authors.
+Recipients receive the same noncommercial research permission directly under
+these terms; you may not grant broader rights to the original Materials or
+remove their noncommercial research restriction.
+
+5. Reserved rights and termination
+
+All rights not expressly granted are reserved. No rights to the authors'
+trademarks, unpublished code, private datasets, or other undistributed
+materials are granted. Nothing here limits rights that applicable law gives
+you independently of this license.
+
+If you materially breach these terms, permission ends unless you fully remedy
+the breach within 30 days after written notice from a copyright holder.
+After termination, you must stop uses that require this permission unless a
+copyright holder separately authorizes them in writing.
+
+6. No warranty or liability
+
+To the extent permitted by applicable law, the Materials are provided "as is",
+without warranties of any kind, including merchantability, fitness for a
+particular purpose, accuracy, or non-infringement. The copyright holders are
+not liable for claims, damages, or other liability arising from the Materials
+or their use. The Materials are research tools; this license provides no
+assurance of suitability for clinical diagnosis or treatment.

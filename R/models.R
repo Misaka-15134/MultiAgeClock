@@ -1,4 +1,4 @@
-.model_ids <- c("clinical_k17", "clinical", "olink", "nmr", "integrated")
+.model_ids <- c("clinical_k17", "clinical_k4", "clinical", "olink", "nmr", "integrated")
 .release <- "v0.1.0"
 
 .metadata <- function(model) {
@@ -19,7 +19,7 @@
 #' @export
 list_models <- function() {
   data.frame(model = .model_ids,
-             label = c("Clinical K17", "Clinical full", "Olink", "NMR", "Integrated"),
+             label = c("Clinical K17", "Clinical K4 (exploratory)", "Clinical full", "Olink", "NMR", "Integrated"),
              n_features = vapply(.model_ids, function(x) length(.metadata(x)$features), integer(1)),
              version = .release, row.names = NULL)
 }

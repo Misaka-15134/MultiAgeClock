@@ -23,4 +23,6 @@ The public reference examples are generated artificial inputs, with expected res
 
 All inputs must be complete. Full clinical and integrated feature names follow the current frozen clinical binding dictionary. The K17 panel is the separately frozen common clinical panel used for external validation. Earlier candidate panels are not substituted for it.
 
+The separately available K4 model uses cystatin C (mg/L), systolic blood pressure (mmHg), waist circumference (cm) and HbA1c (mmol/mol), plus chronological age in years. It uses its own five frozen neural models, standardization and age calibration, rather than dropping inputs from K17. Its reference ages are 40-70 years. K4 is an exploratory model evaluated after external outcomes were accessed; its age mapping was fitted on UK Biobank data only. It is not a prespecified external-validation model.
+
 Input unit metadata are available through `model_features()`. Extra columns are ignored, column order does not affect the calculation, and ambiguous mappings are rejected. There is no automatic unit inference, imputation, panel substitution or target-cohort recalibration.

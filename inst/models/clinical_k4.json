@@ -1,0 +1,607 @@
+{
+  "format_version": 1,
+  "model_id": "clinical_k4",
+  "activation": "ELU",
+  "features": [
+    "cystatin_c",
+    "systolic_blood_pressure",
+    "waist_circumference",
+    "hba1c"
+  ],
+  "feature_schema": [
+    {
+      "feature": "cystatin_c",
+      "label": "Cystatin C",
+      "unit": "mg/L",
+      "ukb_field_id": 30720
+    },
+    {
+      "feature": "systolic_blood_pressure",
+      "label": "Systolic blood pressure, automated reading",
+      "unit": "mmHg",
+      "ukb_field_id": 4080
+    },
+    {
+      "feature": "waist_circumference",
+      "label": "Waist circumference",
+      "unit": "cm",
+      "ukb_field_id": 48
+    },
+    {
+      "feature": "hba1c",
+      "label": "Glycated haemoglobin (HbA1c)",
+      "unit": "mmol/mol",
+      "ukb_field_id": 30750
+    }
+  ],
+  "means": [
+    0.907598614692688,
+    139.7742156982422,
+    90.43537902832031,
+    36.19270324707031
+  ],
+  "sds": [
+    0.17133904993534088,
+    19.443174362182617,
+    13.46192741394043,
+    6.532205104827881
+  ],
+  "endpoints": [
+    "NHL",
+    "pri_bladder",
+    "pri_bowel",
+    "pri_kidney",
+    "pri_liver",
+    "pri_lung",
+    "pri_melanoma",
+    "pri_ovarian",
+    "pri_pancr",
+    "pri_skin",
+    "pri_stomach",
+    "AF",
+    "Intracereb_haem",
+    "Isch_stroke",
+    "dcm",
+    "hf",
+    "mult_valve",
+    "nonRh_aortic",
+    "peripheral_arterial_disease",
+    "angiodysplasia_colon",
+    "hernia_diaphragm",
+    "volvulus",
+    "diabetes_t1",
+    "diabetes_t2",
+    "cataract",
+    "glaucoma",
+    "macula_degen",
+    "BPH",
+    "CKD",
+    "GN",
+    "OA",
+    "RhA",
+    "gout",
+    "Parkinsons",
+    "dementia",
+    "COPD",
+    "all_cause_mortality"
+  ],
+  "seed_files": [
+    "seed_1234.bin.gz",
+    "seed_1235.bin.gz",
+    "seed_1236.bin.gz",
+    "seed_1237.bin.gz",
+    "seed_1238.bin.gz"
+  ],
+  "tensor_layout": [
+    {
+      "name": "shared.layers.0.weight",
+      "dim": [
+        256,
+        4
+      ]
+    },
+    {
+      "name": "shared.layers.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.1.weight",
+      "dim": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.2.weight",
+      "dim": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_1.weight",
+      "dim": [
+        36,
+        512,
+        4
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_1.bias",
+      "dim": [
+        36,
+        512
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_2.weight",
+      "dim": [
+        36,
+        256,
+        512
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_2.bias",
+      "dim": [
+        36,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_3.weight",
+      "dim": [
+        36,
+        256,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_3.bias",
+      "dim": [
+        36,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.weight",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.bias",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.running_mean",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.running_var",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.weight",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.bias",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.running_mean",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.running_var",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.weight",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.bias",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.running_mean",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.running_var",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_1.weight",
+      "dim": [
+        36,
+        256,
+        512
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_1.bias",
+      "dim": [
+        36,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.weight",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.bias",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.running_mean",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.running_var",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_2.weight",
+      "dim": [
+        36,
+        1,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_2.bias",
+      "dim": [
+        36,
+        1
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.0.weight",
+      "dim": [
+        512,
+        4
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.0.bias",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.1.weight",
+      "dim": [
+        256,
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.2.weight",
+      "dim": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.weight",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.bias",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.running_mean",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.running_var",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.0.weight",
+      "dim": [
+        256,
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.1.weight",
+      "dim": [
+        1,
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.1.bias",
+      "dim": [
+        1
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.running_var",
+      "dim": [
+        256
+      ]
+    }
+  ],
+  "calibration": {
+    "eta_mean": -0.03762091593871243,
+    "scale": 6.467244440566742,
+    "score_coefficients": [
+      0.006725166419061003,
+      0.00853857136338587,
+      0.030327139070130713,
+      0.007279019473409898,
+      0.008984754142448504,
+      0.04546304294863855,
+      0.0037047977959628847,
+      0.007121963354919303,
+      0.01285552805442243,
+      0.0013451033686034475,
+      0.007424476399810788,
+      0.01420143379268611,
+      0.010032359321309792,
+      0.027554831270051997,
+      0.0051792438480527826,
+      0.005793399523565313,
+      0.0015036146563177555,
+      0.007525807848831945,
+      0.0035538684701840392,
+      0.00373319303257592,
+      0.001965593781646104,
+      0.003423152451678928,
+      0.0018827802935076079,
+      0.03325928087088759,
+      0.0016750387816261158,
+      0.0003698481553646925,
+      0.0008711456069998879,
+      0.002150287153670098,
+      0.016379752598241145,
+      0.0001461316646384569,
+      0.021837331234255596,
+      0.0040800592647122136,
+      0.0017445191312461525,
+      0.007565470643391423,
+      0.04697959218375155,
+      0.05748766319194309,
+      0.44191563956973823
+    ],
+    "spline": {
+      "knots": [
+        40.0,
+        55.0,
+        70.0
+      ],
+      "values": [
+        36.401743649436625,
+        54.56778690384271,
+        73.21212892547976
+      ],
+      "patsy_coefficients": [
+        41.045414869689786,
+        -4.643671220253157,
+        13.522372034152923,
+        32.16671405578998
+      ]
+    },
+    "age_range": [
+      40,
+      70
+    ]
+  },
+  "weights_encoding": "float32_little_endian_column_major_gzip",
+  "missing_policy": "complete_required_panel_only"
+}

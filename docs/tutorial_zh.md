@@ -2,6 +2,8 @@
 
 MultiAgeClock 将冻结模型应用于已有表格。每行代表一次测量，各指标占一列，另需实际年龄 `chronological_age`，单位为年。计算在本机完成，不上传表格。
 
+代码、文档、模型参数与权重均按 [MultiAgeClock Noncommercial Research License 1.0](../LICENSE) 提供，仅限非商业科研使用。商业产品、收费计算服务及面向商业利益的研发需另行取得权利人的书面授权。
+
 ## 1. 安装和选择模型
 
 ```r
@@ -14,6 +16,18 @@ model_features("clinical_k17")
 ```
 
 `clinical_k17` 是论文外部验证使用的 17 指标临床模型。`clinical` 为 47 指标完整版，`olink` 为 2,920 蛋白模型，`nmr` 为 168 指标核磁共振代谢组模型，`integrated` 联合三个完整模态。选用哪套模型取决于已有指标，不能用 K17 代替整合模型要求的完整临床面板。
+
+`clinical_k4` 是四指标探索性模型，只需胱抑素 C（mg/L）、收缩压（mmHg）、腰围（cm）、HbA1c（mmol/mol），另加实际年龄（年）。K4 有独立的五种子权重、标准化参数及年龄标定；它在外部结局读取后作为探索性方案评价，年龄映射只使用 UK Biobank 数据拟合。默认模型仍为 K17。
+
+```r
+# 使用 K4 时显式选择模型。
+# download_models("clinical_k4")
+# k4 <- load_model("clinical_k4")
+# k4_ages <- predict_age(example_data("clinical_k4"), k4, id_col = "sample_id")
+# score_file("k4_measurements.csv", "k4_ages.csv", model = k4, id_col = "sample_id")
+```
+
+K4 的输入列名为 `chronological_age`、`cystatin_c`、`systolic_blood_pressure`、`waist_circumference`、`hba1c`，可另加样本标识列。四项指标均需完整，参考年龄范围为 40–70 岁。
 
 模型权重只需下载一次。它们独立于 R 包保存在用户缓存中；离线计算可指定已下载的模型目录。
 

@@ -21,7 +21,10 @@ expect_error(predict_age(example_data(), batch_size = 0), "positive integer")
 expect_error(predict_age(example_data(), column_map = c(unknown = "sample_id")), "unknown")
 expect_error(predict_age(example_data()[0, ]), "non-empty")
 models <- list_models()
-stopifnot(identical(models$n_features, c(17L, 47L, 2920L, 168L, 3135L)))
+stopifnot(identical(models$n_features, c(17L, 4L, 47L, 2920L, 168L, 3135L)))
+stopifnot(identical(model_features("clinical_k4")$feature,
+                   c("chronological_age", "cystatin_c", "systolic_blood_pressure", "waist_circumference", "hba1c")))
+expect_error(predict_age(example_data("clinical_k4")[, -3], "clinical_k4"), "Missing required columns")
 for (id in models$model) {
   stopifnot(all(model_features(id)$feature %in% names(example_data(id))))
   stopifnot(nrow(example_data(id)) == 9L)

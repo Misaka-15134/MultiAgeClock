@@ -5,12 +5,15 @@ Calculate frozen multimodal biological ages from complete tabular measurements i
 | Model ID | Biomarker inputs | Additional input |
 |---|---:|---|
 | `clinical_k17` | 17 clinical measurements | Age in years |
+| `clinical_k4` | 4 clinical measurements; exploratory model | Age in years |
 | `clinical` | 47 clinical measurements | Age in years |
 | `olink` | 2,920 Olink proteins | Age in years |
 | `nmr` | 168 NMR measurements | Age in years |
 | `integrated` | All three full panels, 3,135 measurements | Age in years |
 
 The K17 model is the frozen clinical panel used for external validation. Each neural model averages five frozen seed models. Inference runs locally. The default R backend does not require Python; an optional PyTorch backend supports vectorized CPU and GPU inference in a separate local Python process.
+
+The K4 model uses cystatin C, systolic blood pressure, waist circumference and HbA1c. It is an exploratory panel evaluated after access to external outcomes, with its age mapping fitted using UK Biobank data only. Its evidence status differs from that of the prespecified K17 model. To calculate K4 ages, use `download_models("clinical_k4")` and `predict_age(example_data("clinical_k4"), "clinical_k4")`.
 
 ```r
 install.packages("remotes")
@@ -42,4 +45,6 @@ CSV and TSV are supported directly. For Excel files, install `readxl` for readin
 
 This repository provides frozen-model inference, necessary preprocessing and calibration parameters, synthetic examples and tests. Training, hyperparameter search, feature selection, research analyses and participant data are outside this distribution. The models are intended for research; individual results do not establish clinical diagnostic thresholds.
 
-Model files are distributed separately in [versioned releases](https://github.com/Misaka-15134/MultiAgeClock/releases). Installation from the source repository alone does not include the weight files. See [LICENSE](LICENSE) for usage terms.
+Model files are distributed separately in [versioned releases](https://github.com/Misaka-15134/MultiAgeClock/releases). Installation from the source repository alone does not include the weight files.
+
+The code, documentation, model parameters and weights are available under the [MultiAgeClock Noncommercial Research License 1.0](LICENSE), solely for noncommercial scientific research. Commercial use requires separate written permission from the copyright holders. Contact the repository maintainers for commercial licensing.
