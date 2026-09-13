@@ -1,0 +1,994 @@
+{
+  "format_version": 1,
+  "model_id": "clinical",
+  "activation": "ELU",
+  "features": [
+    "white_blood_cell_count",
+    "red_blood_cell_count",
+    "haematocrit_percentage",
+    "mean_corpuscular_volume",
+    "mean_corpuscular_haemoglobin",
+    "mean_corpuscular_haemoglobin_concentration",
+    "red_blood_cell_distribution_width",
+    "platelet_count",
+    "mean_platelet_volume",
+    "platelet_distribution_width",
+    "lymphocyte_count",
+    "monocyte_count",
+    "neutrophil_count",
+    "eosinophil_count",
+    "basophil_count",
+    "reticulocyte_percentage",
+    "immature_reticulocyte_fraction",
+    "albumin",
+    "alp",
+    "alt",
+    "apolipoprotein_a",
+    "ast",
+    "urea",
+    "calcium",
+    "cholesterol",
+    "creatinine",
+    "crp",
+    "cystatin_c",
+    "ggt",
+    "glucose",
+    "hba1c",
+    "hdl",
+    "igf1",
+    "phosphate",
+    "shbg",
+    "total_bilirubin",
+    "testosterone",
+    "total_protein",
+    "triglycerides",
+    "urate",
+    "vitamin_d",
+    "standing_height",
+    "waist_circumference",
+    "hip_circumference",
+    "fvc_best",
+    "diastolic_blood_pressure",
+    "systolic_blood_pressure"
+  ],
+  "feature_schema": [
+    {
+      "feature": "white_blood_cell_count",
+      "label": "White blood cell (leukocyte) count",
+      "unit": "10^9 cells/Litre",
+      "ukb_field_id": 30000
+    },
+    {
+      "feature": "red_blood_cell_count",
+      "label": "Red blood cell (erythrocyte) count",
+      "unit": "10^12 cells/Litre",
+      "ukb_field_id": 30010
+    },
+    {
+      "feature": "haematocrit_percentage",
+      "label": "Haematocrit percentage",
+      "unit": "percent",
+      "ukb_field_id": 30030
+    },
+    {
+      "feature": "mean_corpuscular_volume",
+      "label": "Mean corpuscular volume",
+      "unit": "femtolitres",
+      "ukb_field_id": 30040
+    },
+    {
+      "feature": "mean_corpuscular_haemoglobin",
+      "label": "Mean corpuscular haemoglobin",
+      "unit": "picograms",
+      "ukb_field_id": 30050
+    },
+    {
+      "feature": "mean_corpuscular_haemoglobin_concentration",
+      "label": "Mean corpuscular haemoglobin concentration",
+      "unit": "grams/decilitre",
+      "ukb_field_id": 30060
+    },
+    {
+      "feature": "red_blood_cell_distribution_width",
+      "label": "Red blood cell (erythrocyte) distribution width",
+      "unit": "percent",
+      "ukb_field_id": 30070
+    },
+    {
+      "feature": "platelet_count",
+      "label": "Platelet count",
+      "unit": "10^9 cells/Litre",
+      "ukb_field_id": 30080
+    },
+    {
+      "feature": "mean_platelet_volume",
+      "label": "Mean platelet (thrombocyte) volume",
+      "unit": "femtolitres",
+      "ukb_field_id": 30100
+    },
+    {
+      "feature": "platelet_distribution_width",
+      "label": "Platelet distribution width",
+      "unit": "percent",
+      "ukb_field_id": 30110
+    },
+    {
+      "feature": "lymphocyte_count",
+      "label": "Lymphocyte count",
+      "unit": "10^9 cells/Litre",
+      "ukb_field_id": 30120
+    },
+    {
+      "feature": "monocyte_count",
+      "label": "Monocyte count",
+      "unit": "10^9 cells/Litre",
+      "ukb_field_id": 30130
+    },
+    {
+      "feature": "neutrophil_count",
+      "label": "Neutrophill count",
+      "unit": "10^9 cells/Litre",
+      "ukb_field_id": 30140
+    },
+    {
+      "feature": "eosinophil_count",
+      "label": "Eosinophill count",
+      "unit": "10^9 cells/Litre",
+      "ukb_field_id": 30150
+    },
+    {
+      "feature": "basophil_count",
+      "label": "Basophill count",
+      "unit": "10^9 cells/Litre",
+      "ukb_field_id": 30160
+    },
+    {
+      "feature": "reticulocyte_percentage",
+      "label": "Reticulocyte percentage",
+      "unit": "percent",
+      "ukb_field_id": 30240
+    },
+    {
+      "feature": "immature_reticulocyte_fraction",
+      "label": "Immature reticulocyte fraction",
+      "unit": "ratio",
+      "ukb_field_id": 30280
+    },
+    {
+      "feature": "albumin",
+      "label": "Albumin",
+      "unit": "g/L",
+      "ukb_field_id": 30600
+    },
+    {
+      "feature": "alp",
+      "label": "Alkaline phosphatase",
+      "unit": "U/L",
+      "ukb_field_id": 30610
+    },
+    {
+      "feature": "alt",
+      "label": "Alanine aminotransferase",
+      "unit": "U/L",
+      "ukb_field_id": 30620
+    },
+    {
+      "feature": "apolipoprotein_a",
+      "label": "Apolipoprotein A",
+      "unit": "g/L",
+      "ukb_field_id": 30630
+    },
+    {
+      "feature": "ast",
+      "label": "Aspartate aminotransferase",
+      "unit": "U/L",
+      "ukb_field_id": 30650
+    },
+    {
+      "feature": "urea",
+      "label": "Urea",
+      "unit": "mmol/L",
+      "ukb_field_id": 30670
+    },
+    {
+      "feature": "calcium",
+      "label": "Calcium",
+      "unit": "mmol/L",
+      "ukb_field_id": 30680
+    },
+    {
+      "feature": "cholesterol",
+      "label": "Cholesterol",
+      "unit": "mmol/L",
+      "ukb_field_id": 30690
+    },
+    {
+      "feature": "creatinine",
+      "label": "Creatinine",
+      "unit": "umol/L",
+      "ukb_field_id": 30700
+    },
+    {
+      "feature": "crp",
+      "label": "C-reactive protein",
+      "unit": "mg/L",
+      "ukb_field_id": 30710
+    },
+    {
+      "feature": "cystatin_c",
+      "label": "Cystatin C",
+      "unit": "mg/L",
+      "ukb_field_id": 30720
+    },
+    {
+      "feature": "ggt",
+      "label": "Gamma glutamyltransferase",
+      "unit": "U/L",
+      "ukb_field_id": 30730
+    },
+    {
+      "feature": "glucose",
+      "label": "Glucose",
+      "unit": "mmol/L",
+      "ukb_field_id": 30740
+    },
+    {
+      "feature": "hba1c",
+      "label": "Glycated haemoglobin (HbA1c)",
+      "unit": "mmol/mol",
+      "ukb_field_id": 30750
+    },
+    {
+      "feature": "hdl",
+      "label": "HDL cholesterol",
+      "unit": "mmol/L",
+      "ukb_field_id": 30760
+    },
+    {
+      "feature": "igf1",
+      "label": "IGF-1",
+      "unit": "nmol/L",
+      "ukb_field_id": 30770
+    },
+    {
+      "feature": "phosphate",
+      "label": "Phosphate",
+      "unit": "mmol/L",
+      "ukb_field_id": 30810
+    },
+    {
+      "feature": "shbg",
+      "label": "SHBG",
+      "unit": "nmol/L",
+      "ukb_field_id": 30830
+    },
+    {
+      "feature": "total_bilirubin",
+      "label": "Total bilirubin",
+      "unit": "umol/L",
+      "ukb_field_id": 30840
+    },
+    {
+      "feature": "testosterone",
+      "label": "Testosterone",
+      "unit": "nmol/L",
+      "ukb_field_id": 30850
+    },
+    {
+      "feature": "total_protein",
+      "label": "Total protein",
+      "unit": "g/L",
+      "ukb_field_id": 30860
+    },
+    {
+      "feature": "triglycerides",
+      "label": "Triglycerides",
+      "unit": "mmol/L",
+      "ukb_field_id": 30870
+    },
+    {
+      "feature": "urate",
+      "label": "Urate",
+      "unit": "umol/L",
+      "ukb_field_id": 30880
+    },
+    {
+      "feature": "vitamin_d",
+      "label": "Vitamin D",
+      "unit": "nmol/L",
+      "ukb_field_id": 30890
+    },
+    {
+      "feature": "standing_height",
+      "label": "Standing height",
+      "unit": "cm",
+      "ukb_field_id": 50
+    },
+    {
+      "feature": "waist_circumference",
+      "label": "Waist circumference",
+      "unit": "cm",
+      "ukb_field_id": 48
+    },
+    {
+      "feature": "hip_circumference",
+      "label": "Hip circumference",
+      "unit": "cm",
+      "ukb_field_id": 49
+    },
+    {
+      "feature": "fvc_best",
+      "label": "Forced vital capacity (FVC)",
+      "unit": "litres",
+      "ukb_field_id": 3062
+    },
+    {
+      "feature": "diastolic_blood_pressure",
+      "label": "Diastolic blood pressure, automated reading",
+      "unit": "mmHg",
+      "ukb_field_id": 4079
+    },
+    {
+      "feature": "systolic_blood_pressure",
+      "label": "Systolic blood pressure, automated reading",
+      "unit": "mmHg",
+      "ukb_field_id": 4080
+    }
+  ],
+  "means": [
+    6.905893802642822,
+    4.523314952850342,
+    41.10715103149414,
+    91.04011535644531,
+    31.415180206298828,
+    34.50358963012695,
+    13.493413925170898,
+    252.18746948242188,
+    9.339949607849121,
+    16.49308204650879,
+    1.9669694900512695,
+    0.47712528705596924,
+    4.246150016784668,
+    0.17533965408802032,
+    0.03479024022817612,
+    1.3558658361434937,
+    0.2895665764808655,
+    45.20476150512695,
+    83.85033416748047,
+    23.594911575317383,
+    1.5382840633392334,
+    26.19172477722168,
+    5.396493911743164,
+    2.3806793689727783,
+    5.675532817840576,
+    72.34492492675781,
+    2.643855333328247,
+    0.9091883897781372,
+    37.40422058105469,
+    5.131824970245361,
+    36.209190368652344,
+    1.4466197490692139,
+    21.545846939086914,
+    1.161167025566101,
+    51.39579772949219,
+    9.132391929626465,
+    6.2430853843688965,
+    72.57307434082031,
+    1.7499061822891235,
+    309.7393493652344,
+    48.901432037353516,
+    168.49693298339844,
+    90.43926239013672,
+    103.4543685913086,
+    3.6901309490203857,
+    82.21244812011719,
+    139.89158630371094
+  ],
+  "sds": [
+    2.0983474254608154,
+    0.4098813831806183,
+    3.494293212890625,
+    4.5133056640625,
+    1.8829245567321777,
+    1.0549979209899902,
+    0.9689432382583618,
+    58.686466217041016,
+    1.0659128427505493,
+    0.513378918170929,
+    1.1572935581207275,
+    0.2787092924118042,
+    1.3981359004974365,
+    0.13568563759326935,
+    0.049160435795784,
+    0.8900055289268494,
+    0.05973942205309868,
+    2.4854202270507812,
+    25.709291458129883,
+    13.755144119262695,
+    0.25641465187072754,
+    10.181431770324707,
+    1.36307692527771,
+    0.08878228068351746,
+    1.119018316268921,
+    18.293840408325195,
+    4.245875835418701,
+    0.17131370306015015,
+    40.41719436645508,
+    1.1714553833007812,
+    6.6238837242126465,
+    0.36386558413505554,
+    5.602581977844238,
+    0.15143448114395142,
+    26.354536056518555,
+    4.320419788360596,
+    5.795729637145996,
+    3.8840856552124023,
+    1.002392053604126,
+    78.41861724853516,
+    20.1962947845459,
+    9.253173828125,
+    13.466411590576172,
+    9.240798950195312,
+    1.0600690841674805,
+    10.54170036315918,
+    19.45036506652832
+  ],
+  "endpoints": [
+    "NHL",
+    "pri_bladder",
+    "pri_bowel",
+    "pri_kidney",
+    "pri_liver",
+    "pri_lung",
+    "pri_melanoma",
+    "pri_ovarian",
+    "pri_pancr",
+    "pri_skin",
+    "pri_stomach",
+    "AF",
+    "Intracereb_haem",
+    "Isch_stroke",
+    "dcm",
+    "hf",
+    "mult_valve",
+    "nonRh_aortic",
+    "peripheral_arterial_disease",
+    "angiodysplasia_colon",
+    "hernia_diaphragm",
+    "volvulus",
+    "diabetes_t1",
+    "diabetes_t2",
+    "cataract",
+    "glaucoma",
+    "macula_degen",
+    "BPH",
+    "CKD",
+    "GN",
+    "OA",
+    "RhA",
+    "gout",
+    "Parkinsons",
+    "dementia",
+    "COPD",
+    "all_cause_mortality"
+  ],
+  "seed_files": [
+    "seed_1234.bin.gz",
+    "seed_1235.bin.gz",
+    "seed_1236.bin.gz",
+    "seed_1237.bin.gz",
+    "seed_1238.bin.gz"
+  ],
+  "tensor_layout": [
+    {
+      "name": "shared.layers.0.weight",
+      "dim": [
+        256,
+        47
+      ]
+    },
+    {
+      "name": "shared.layers.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.1.weight",
+      "dim": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.2.weight",
+      "dim": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_1.weight",
+      "dim": [
+        36,
+        512,
+        47
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_1.bias",
+      "dim": [
+        36,
+        512
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_2.weight",
+      "dim": [
+        36,
+        256,
+        512
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_2.bias",
+      "dim": [
+        36,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_3.weight",
+      "dim": [
+        36,
+        256,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_3.bias",
+      "dim": [
+        36,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.weight",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.bias",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.running_mean",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.running_var",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.weight",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.bias",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.running_mean",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.running_var",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.weight",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.bias",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.running_mean",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.running_var",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_1.weight",
+      "dim": [
+        36,
+        256,
+        512
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_1.bias",
+      "dim": [
+        36,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.weight",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.bias",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.running_mean",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.running_var",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_2.weight",
+      "dim": [
+        36,
+        1,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_2.bias",
+      "dim": [
+        36,
+        1
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.0.weight",
+      "dim": [
+        512,
+        47
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.0.bias",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.1.weight",
+      "dim": [
+        256,
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.2.weight",
+      "dim": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.weight",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.bias",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.running_mean",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.running_var",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.0.weight",
+      "dim": [
+        256,
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.1.weight",
+      "dim": [
+        1,
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.1.bias",
+      "dim": [
+        1
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.running_var",
+      "dim": [
+        256
+      ]
+    }
+  ],
+  "calibration": {
+    "eta_mean": -0.044943017370008095,
+    "scale": 7.214795214469598,
+    "score_coefficients": [
+      0.0065982251348773524,
+      0.007805583239184144,
+      0.030801291917546623,
+      0.006973568595824874,
+      0.009443037344363855,
+      0.055078451421306525,
+      0.004695675102320515,
+      0.005143756690430766,
+      0.015089442326799003,
+      0.0013768814625521842,
+      0.007676479149590188,
+      0.014772698463352716,
+      0.014981338277352232,
+      0.02884917929169931,
+      0.005735375704259816,
+      0.006140391437051717,
+      0.0015647078205757367,
+      0.0077283761658497796,
+      0.0038069878485662957,
+      0.004041124813884189,
+      0.002163687943617902,
+      0.0035486653417252396,
+      0.0021057871626839926,
+      0.03607048459334888,
+      0.0018340509640066053,
+      0.00035377115520189676,
+      0.0009074288689041435,
+      0.0021892028064764107,
+      0.017112916504052975,
+      0.00012626550490805232,
+      0.023171205194586007,
+      0.0053766843056247335,
+      0.0016938860597652322,
+      0.00895480994023527,
+      0.04808830207388848,
+      0.06075186386121761,
+      0.4626868278738826
+    ],
+    "spline": {
+      "knots": [
+        37.0,
+        55.5,
+        73.0
+      ],
+      "values": [
+        30.772704464834753,
+        54.74174052924239,
+        80.25858851581987
+      ],
+      "patsy_coefficients": [
+        41.44325837747423,
+        -10.670553912639479,
+        13.298482151768162,
+        38.81533013834564
+      ]
+    },
+    "age_range": [
+      37.0,
+      73.0
+    ]
+  },
+  "weights_encoding": "float32_little_endian_column_major_gzip",
+  "missing_policy": "complete_required_panel_only"
+}

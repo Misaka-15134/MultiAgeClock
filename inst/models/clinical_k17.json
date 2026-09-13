@@ -1,0 +1,724 @@
+{
+  "format_version": 1,
+  "model_id": "clinical_k17",
+  "activation": "ELU",
+  "features": [
+    "cystatin_c",
+    "systolic_blood_pressure",
+    "waist_circumference",
+    "hba1c",
+    "diastolic_blood_pressure",
+    "cholesterol",
+    "urate",
+    "urea",
+    "platelet_count",
+    "mean_corpuscular_volume",
+    "standing_height",
+    "creatinine",
+    "glucose",
+    "triglycerides",
+    "haematocrit_percentage",
+    "hdl",
+    "crp"
+  ],
+  "feature_schema": [
+    {
+      "feature": "cystatin_c",
+      "label": "Cystatin C",
+      "unit": "mg/L",
+      "ukb_field_id": 30720
+    },
+    {
+      "feature": "systolic_blood_pressure",
+      "label": "Systolic blood pressure, automated reading",
+      "unit": "mmHg",
+      "ukb_field_id": 4080
+    },
+    {
+      "feature": "waist_circumference",
+      "label": "Waist circumference",
+      "unit": "cm",
+      "ukb_field_id": 48
+    },
+    {
+      "feature": "hba1c",
+      "label": "Glycated haemoglobin (HbA1c)",
+      "unit": "mmol/mol",
+      "ukb_field_id": 30750
+    },
+    {
+      "feature": "diastolic_blood_pressure",
+      "label": "Diastolic blood pressure, automated reading",
+      "unit": "mmHg",
+      "ukb_field_id": 4079
+    },
+    {
+      "feature": "cholesterol",
+      "label": "Cholesterol",
+      "unit": "mmol/L",
+      "ukb_field_id": 30690
+    },
+    {
+      "feature": "urate",
+      "label": "Urate",
+      "unit": "umol/L",
+      "ukb_field_id": 30880
+    },
+    {
+      "feature": "urea",
+      "label": "Urea",
+      "unit": "mmol/L",
+      "ukb_field_id": 30670
+    },
+    {
+      "feature": "platelet_count",
+      "label": "Platelet count",
+      "unit": "10^9 cells/Litre",
+      "ukb_field_id": 30080
+    },
+    {
+      "feature": "mean_corpuscular_volume",
+      "label": "Mean corpuscular volume",
+      "unit": "femtolitres",
+      "ukb_field_id": 30040
+    },
+    {
+      "feature": "standing_height",
+      "label": "Standing height",
+      "unit": "cm",
+      "ukb_field_id": 50
+    },
+    {
+      "feature": "creatinine",
+      "label": "Creatinine",
+      "unit": "umol/L",
+      "ukb_field_id": 30700
+    },
+    {
+      "feature": "glucose",
+      "label": "Glucose",
+      "unit": "mmol/L",
+      "ukb_field_id": 30740
+    },
+    {
+      "feature": "triglycerides",
+      "label": "Triglycerides",
+      "unit": "mmol/L",
+      "ukb_field_id": 30870
+    },
+    {
+      "feature": "haematocrit_percentage",
+      "label": "Haematocrit percentage",
+      "unit": "percent",
+      "ukb_field_id": 30030
+    },
+    {
+      "feature": "hdl",
+      "label": "HDL cholesterol",
+      "unit": "mmol/L",
+      "ukb_field_id": 30760
+    },
+    {
+      "feature": "crp",
+      "label": "C-reactive protein",
+      "unit": "mg/L",
+      "ukb_field_id": 30710
+    }
+  ],
+  "means": [
+    0.908659040927887,
+    139.79440307617188,
+    90.43807983398438,
+    36.15952682495117,
+    82.2149658203125,
+    5.685187816619873,
+    309.8045654296875,
+    5.402156352996826,
+    252.34988403320312,
+    91.04541015625,
+    168.49977111816406,
+    72.3950424194336,
+    5.11619234085083,
+    1.7499877214431763,
+    41.10014724731445,
+    1.4463257789611816,
+    2.615264415740967
+  ],
+  "sds": [
+    0.17122741043567657,
+    19.454296112060547,
+    13.463104248046875,
+    6.51790714263916,
+    10.5609130859375,
+    1.1153496503829956,
+    78.54590606689453,
+    1.3652691841125488,
+    58.68495559692383,
+    4.523075580596924,
+    9.24509048461914,
+    18.263696670532227,
+    1.1567562818527222,
+    1.0033984184265137,
+    3.4958629608154297,
+    0.36348551511764526,
+    4.222009658813477
+  ],
+  "endpoints": [
+    "NHL",
+    "pri_bladder",
+    "pri_bowel",
+    "pri_kidney",
+    "pri_liver",
+    "pri_lung",
+    "pri_melanoma",
+    "pri_ovarian",
+    "pri_pancr",
+    "pri_skin",
+    "pri_stomach",
+    "AF",
+    "Intracereb_haem",
+    "Isch_stroke",
+    "dcm",
+    "hf",
+    "mult_valve",
+    "nonRh_aortic",
+    "peripheral_arterial_disease",
+    "angiodysplasia_colon",
+    "hernia_diaphragm",
+    "volvulus",
+    "diabetes_t1",
+    "diabetes_t2",
+    "cataract",
+    "glaucoma",
+    "macula_degen",
+    "BPH",
+    "CKD",
+    "GN",
+    "OA",
+    "RhA",
+    "gout",
+    "Parkinsons",
+    "dementia",
+    "COPD",
+    "all_cause_mortality"
+  ],
+  "seed_files": [
+    "seed_1234.bin.gz",
+    "seed_1235.bin.gz",
+    "seed_1236.bin.gz",
+    "seed_1237.bin.gz",
+    "seed_1238.bin.gz"
+  ],
+  "tensor_layout": [
+    {
+      "name": "shared.layers.0.weight",
+      "dim": [
+        256,
+        17
+      ]
+    },
+    {
+      "name": "shared.layers.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.1.weight",
+      "dim": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.2.weight",
+      "dim": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "shared.layers.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.0.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.1.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "shared.norms.2.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_1.weight",
+      "dim": [
+        36,
+        512,
+        17
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_1.bias",
+      "dim": [
+        36,
+        512
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_2.weight",
+      "dim": [
+        36,
+        256,
+        512
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_2.bias",
+      "dim": [
+        36,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_3.weight",
+      "dim": [
+        36,
+        256,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.bypass_3.bias",
+      "dim": [
+        36,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.weight",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.bias",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.running_mean",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_1.running_var",
+      "dim": [
+        18432
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.weight",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.bias",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.running_mean",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_2.running_var",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.weight",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.bias",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.running_mean",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.norm_3.running_var",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_1.weight",
+      "dim": [
+        36,
+        256,
+        512
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_1.bias",
+      "dim": [
+        36,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.weight",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.bias",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.running_mean",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_norm.running_var",
+      "dim": [
+        9216
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_2.weight",
+      "dim": [
+        36,
+        1,
+        256
+      ]
+    },
+    {
+      "name": "disease_tower.predictor_2.bias",
+      "dim": [
+        36,
+        1
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.0.weight",
+      "dim": [
+        512,
+        17
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.0.bias",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.1.weight",
+      "dim": [
+        256,
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.2.weight",
+      "dim": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.layers.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.weight",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.bias",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.running_mean",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.0.running_var",
+      "dim": [
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.1.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.bypass.norms.2.running_var",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.0.weight",
+      "dim": [
+        256,
+        512
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.1.weight",
+      "dim": [
+        1,
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.layers.1.bias",
+      "dim": [
+        1
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.weight",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.bias",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.running_mean",
+      "dim": [
+        256
+      ]
+    },
+    {
+      "name": "mortality_head.predictor.norms.0.running_var",
+      "dim": [
+        256
+      ]
+    }
+  ],
+  "calibration": {
+    "eta_mean": -0.09112093310316262,
+    "scale": 6.843738952085706,
+    "score_coefficients": [
+      0.008334896408952658,
+      0.00809061052009194,
+      0.03153812441275933,
+      0.008120599653152727,
+      0.010397188956563176,
+      0.05497858928455221,
+      0.004469204112793628,
+      0.0035905308335311865,
+      0.014535683282005812,
+      0.0014908740106875985,
+      0.0062525448507005634,
+      0.014357583829823536,
+      0.01117731424243917,
+      0.028876057820387102,
+      0.005407576084507734,
+      0.005916327705829474,
+      0.0015413507110167094,
+      0.007677523804975155,
+      0.003722085902106941,
+      0.0037919685629059768,
+      0.002056075692714593,
+      0.004207574341288983,
+      0.0021112275142829134,
+      0.03508299355166407,
+      0.0017614206750128111,
+      0.0003979235955523491,
+      0.0008477015365478832,
+      0.0021359547722566803,
+      0.01656137831066962,
+      0.00013473313554049983,
+      0.022178469487729745,
+      0.00442900262483838,
+      0.001729780818757239,
+      0.008652858648931474,
+      0.050416242697205065,
+      0.059593181300474515,
+      0.4597608700646672
+    ],
+    "spline": {
+      "knots": [
+        40.0,
+        55.0,
+        70.0
+      ],
+      "values": [
+        35.75628393116385,
+        54.240657441276795,
+        74.52005972282562
+      ],
+      "patsy_coefficients": [
+        41.12925027381658,
+        -5.372966342652727,
+        13.111407167460214,
+        33.39080944900904
+      ]
+    },
+    "age_range": [
+      40,
+      70
+    ]
+  },
+  "weights_encoding": "float32_little_endian_column_major_gzip",
+  "missing_policy": "complete_required_panel_only"
+}

@@ -1,0 +1,17 @@
+Package: MultiAgeClock
+Title: Frozen Multimodal Biological Age Models
+Version: 0.1.0
+Authors@R: person("MultiAgeClock", "Authors", role = c("aut", "cre"),
+    email = "128982595+Misaka-15134@users.noreply.github.com")
+Description: Applies frozen clinical, proteomic, metabolomic and integrated
+    biological age models to complete tabular inputs. Provides model input
+    dictionaries, five-model-ensemble inference, frozen age calibration and
+    file scoring. Model parameters are distributed separately from the package.
+License: file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports: jsonlite
+Suggests: readxl, writexl
+URL: https://github.com/Misaka-15134/MultiAgeClock
+BugReports: https://github.com/Misaka-15134/MultiAgeClock/issues
+RoxygenNote: 7.3.1
