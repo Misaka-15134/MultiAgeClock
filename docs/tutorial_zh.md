@@ -42,7 +42,7 @@ fit <- load_model("clinical_k17")
 
 ## 2. 准备 K17 表格
 
-先用 `example_data()` 查看列名。这九行是人工生成的软件示例，不是受试者，也不代表真实参考人群。
+先用 `example_data()` 查看生成的列名示例。
 
 ```r
 demo <- example_data("clinical_k17")
@@ -162,7 +162,3 @@ Olink 输入为与训练流程一致的 NPX（标准化蛋白表达量）log2 �
 # score_file("measurements.csv", "ages_gpu.csv", model = fit,
 #            backend = "pytorch", device = "cuda", python = py, id_col = "sample_id")
 ```
-
-选择 PyTorch 后，缺少依赖或设备不可用会报错。R 启动独立 Python 进程调用随包提供的推理模块，输入通过本机临时二进制文件传递，计算结束后清理。PyTorch 使用 float32 全精度前向计算。论文历史 GPU 批量导出使用混合精度，逐样本值可能存在小幅数值差异，不能要求与历史文件逐位相同。
-
-这些输出用于科研。计算结果的一致性不等于在任意检测平台或人群中完成了外部验证，也不能直接据此判断个人疾病或制定治疗。
