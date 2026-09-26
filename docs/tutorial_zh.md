@@ -1,8 +1,6 @@
 # 用 MultiAgeClock 批量计算生物年龄
 
-MultiAgeClock 将冻结模型应用于已有表格。每行代表一次测量，各指标占一列，另需实际年龄 `chronological_age`，单位为年。计算在本机完成，不上传表格。
-
-代码、文档、模型参数与权重均按 [MultiAgeClock Noncommercial Research License 1.0](../LICENSE) 提供，仅限非商业科研使用。商业产品、收费计算服务及面向商业利益的研发需另行取得权利人的书面授权。
+MultiAgeClock 将冻结模型应用于已有表格。每行代表一次测量，各指标占一列，另需实际年龄 `chronological_age`，单位为年。
 
 ## 1. 安装和选择模型
 
@@ -71,19 +69,7 @@ write.csv(demo, "k17_input_template.csv", row.names = FALSE)
 | `hdl` | 高密度脂蛋白胆固醇 | mmol/L |
 | `crp` | C 反应蛋白 | mg/L |
 
-输入测量值保持上述原始单位。不要事先做 z 分数标准化，也不要对 CRP 等临床指标自行取对数。模型内部应用冻结的标准化参数。百分比应按百分数输入，例如红细胞压积 42% 填 `42`。
 
-如实验室采用其他单位，先明确转换。以下例子只适用于列名所指的单位：
-
-```r
-# 示例转换；请在自己的数据框中使用实际列名。
-# d$creatinine <- d$creatinine_mg_dl * 88.4
-# d$glucose <- d$glucose_mg_dl / 18.0182
-# d$hba1c <- (d$hba1c_ngsp_percent - 2.15) * 10.929
-# d$crp <- d$crp_mg_dl * 10
-```
-
-HbA1c 的 `%` 与 `mmol/mol` 不可直接混用；尿素氮（BUN）与尿素也不可仅改列名。测量方法、采血和样本处理差异仍可能影响跨队列适用性。
 
 ## 3. 计算数据框
 
